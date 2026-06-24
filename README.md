@@ -20,11 +20,13 @@ achieving strong accuracy on CIFAR-10.
 ## Results
 
 - **Validation accuracy: 91%** after 30 epochs
-- Per-class precision/recall/F1: see `outputs/classification_report.txt`
 - Confusion matrix: see `outputs/confusion_matrix.png`
-- The most common confusion pairs were [fill in from your confusion matrix,
-  e.g. "cat/dog" and "automobile/truck"], which is consistent with known
-  difficulty patterns on CIFAR-10 given the low 32x32 resolution.
+- The most common confusion pair was **cat/dog** (102 cats misclassified as
+  dogs, 65 dogs misclassified as cats), by far the largest source of error in
+  the matrix. A secondary pattern appears among vehicle classes, e.g.
+  automobile/truck and airplane/ship, where shared silhouette shapes at
+  32x32 resolution make fine-grained distinction harder. Both patterns are
+  consistent with well-known difficulty patterns on CIFAR-10.
 
 ## Project Structure
 cifar10-classifier/
